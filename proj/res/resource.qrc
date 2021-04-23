@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>capture-desktop.png</file>
+        <file>capture-window.png</file>
+        <file>capture-window-on.png</file>
+        <file>file-exit.png</file>
+        <file>edit-copy.png</file>
+        <file>edit-delete.png</file>
+        <file>help-about.png</file>
+        <file>file-save_as.png</file>
+        <file>MainImage.png</file>
+        <file>tool-move.png</file>
+        <file>tool-selection.png</file>
+        <file>edit-copy_selection.png</file>
+        <file>file-save_selection.png</file>
+        <file>options-languages.png</file>
+    </qresource>
+</RCC>

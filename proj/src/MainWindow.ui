@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Capture</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionFileSave"/>
+    <addaction name="actionFileSaveSelection"/>
+    <addaction name="separator"/>
+    <addaction name="actionFileExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Edit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionEditCopy"/>
+    <addaction name="actionEditClear"/>
+   </widget>
+   <widget class="QMenu" name="menu_Options">
+    <property name="title">
+     <string>&amp;Options</string>
+    </property>
+    <widget class="QMenu" name="menu_OptionsCaptureWindow">
+     <property name="tearOffEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Capture window</string>
+     </property>
+     <addaction name="actionOptionsCaptureClientArea"/>
+     <addaction name="actionOptionsCaptureWindowArea"/>
+     <addaction name="separator"/>
+     <addaction name="actionOptionsAutoMinimize"/>
+    </widget>
+    <widget class="QMenu" name="menu_OptionsCaptureDesktop">
+     <property name="title">
+      <string>Capture desktop</string>
+     </property>
+     <addaction name="actionOptionsAutoHide"/>
+     <addaction name="separator"/>
+     <addaction name="actionOptionsAutoHideDelay"/>
+    </widget>
+    <widget class="QMenu" name="menu_Languages">
+     <property name="title">
+      <string>Languages</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../res/resource.qrc">
+       <normaloff>:/options-languages.png</normaloff>:/options-languages.png</iconset>
+     </property>
+    </widget>
+    <addaction name="actionOptionsAutoCopy"/>
+    <addaction name="separator"/>
+    <addaction name="menu_OptionsCaptureDesktop"/>
+    <addaction name="menu_OptionsCaptureWindow"/>
+    <addaction name="separator"/>
+    <addaction name="actionOptionsCaptureCursor"/>
+    <addaction name="separator"/>
+    <addaction name="actionOptionsShowBorder"/>
+    <addaction name="actionOptionsBorderColor"/>
+    <addaction name="actionOptionsBackgroundColor"/>
+    <addaction name="separator"/>
+    <addaction name="actionOptionsSelectionColor"/>
+    <addaction name="separator"/>
+    <addaction name="menu_Languages"/>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionHelpAbout"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Edit"/>
+   <addaction name="menu_Options"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>Tool bar</string>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::AllToolBarAreas</set>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionCaptureDesktop"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionCaptureDesktop">
+   <property name="icon">
+    <iconset resource="../res/resource.qrc">
+     <normaloff>:/capture-desktop.png</normaloff>:/capture-desktop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Capture desktop</string>
+   </property>
+  </action>
+  <action name="actionFileSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/resource.qrc">
+     <normaloff>:/file-save_as.png</normaloff>:/file-save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save as...</string>
+   </property>
+  </action>
+  <action name="actionFileSaveSelection">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/resource.qrc">
+     <normaloff>:/file-save_selection.png</normaloff>:/file-save_selection.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save selection as...</string>
+   </property>
+  </action>
+  <action name="actionFileExit">
+   <property name="icon">
+    <iconset resource="../res/resource.qrc">
+     <normaloff>:/file-exit.png</normaloff>:/file-exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+  </action>
+  <action name="actionEditCopy">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/resource.qrc">
+     <normaloff>:/edit-copy.png</normaloff>:/edit-copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Copy</string>
+   </property>
+  </action>
+  <action name="actionEditClear">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/resource.qrc">
+     <normaloff>:/edit-delete.png</normaloff>:/edit-delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </action>
+  <action name="actionOptionsAutoCopy">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Auto &amp;copy</string>
+   </property>
+  </action>
+  <action name="actionOptionsAutoHide">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Auto &amp;hide</string>
+   </property>
+  </action>
+  <action name="actionOptionsAutoHideDelay">
+   <property name="text">
+    <string>Choose auto hide delay</string>
+   </property>
+  </action>
+  <action name="actionOptionsCaptureClientArea">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Client area</string>
+   </property>
+  </action>
+  <action name="actionOptionsCaptureWindowArea">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Window area</string>
+   </property>
+  </action>
+  <action name="actionHelpAbout">
+   <property name="icon">
+    <iconset resource="../res/resource.qrc">
+     <normaloff>:/help-about.png</normaloff>:/help-about.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="actionOptionsBorderColor">
+   <property name="text">
+    <string>Border color</string>
+   </property>
+  </action>
+  <action name="actionOptionsBackgroundColor">
+   <property name="text">
+    <string>Background color</string>
+   </property>
+  </action>
+  <action name="actionOptionsShowBorder">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show border</string>
+   </property>
+  </action>
+  <action name="actionEditCopySelection">
+   <property name="icon">
+    <iconset resource="../res/resource.qrc">
+     <normaloff>:/edit-copy_selection.png</normaloff>:/edit-copy_selection.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy selection</string>
+   </property>
+  </action>
+  <action name="actionOptionsCaptureCursor">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Capture cursor</string>
+   </property>
+  </action>
+  <action name="actionOptionsAutoMinimize">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Auto minimize</string>
+   </property>
+  </action>
+  <action name="actionOptionsSelectionColor">
+   <property name="text">
+    <string>Selection color</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../res/resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionCaptureDesktop</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotCaptureDesktop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFileSave</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotFileSave()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFileSaveSelection</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotFileSaveSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFileExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotFileExit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionEditCopy</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotEditCopy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionEditClear</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotEditClear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOptionsAutoCopy</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotOptionsAutoCopy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOptionsAutoHide</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotOptionsAutoHide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOptionsAutoHideDelay</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotOptionsAutoHideDelay()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOptionsCaptureClientArea</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotOptionsCaptureClientArea()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOptionsCaptureWindowArea</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotOptionsCaptureWindowArea()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionHelpAbout</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotHelpAbout()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOptionsBorderColor</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotOptionsBorderColor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOptionsBackgroundColor</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotOptionsBackgroundColor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOptionsShowBorder</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotOptionsShowBorder()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionEditCopySelection</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotEditCopySelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOptionsSelectionColor</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotOptionsSelectionColor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slotFileExit()</slot>
+  <slot>slotFileSave()</slot>
+  <slot>slotEditCopy()</slot>
+  <slot>slotEditClear()</slot>
+  <slot>slotOptionsAutoHide()</slot>
+  <slot>slotOptionsAutoCopy()</slot>
+  <slot>slotHelpAbout()</slot>
+  <slot>slotCaptureDesktop()</slot>
+  <slot>slotFileSaveSelection()</slot>
+  <slot>slotOptionsAutoHideDelay()</slot>
+  <slot>slotOptionsCaptureClientArea()</slot>
+  <slot>slotOptionsCaptureWindowArea()</slot>
+  <slot>slotOptionsBorderColor()</slot>
+  <slot>slotOptionsBackgroundColor()</slot>
+  <slot>slotOptionsShowBorder()</slot>
+  <slot>slotEditCopySelection()</slot>
+  <slot>slotOptionsSelectionColor()</slot>
+ </slots>
+</ui>

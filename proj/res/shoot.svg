@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="500mm"
+   height="500mm"
+   viewBox="0 0 500 500"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.0 r15299"
+   sodipodi:docname="shoot.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.061871843"
+     inkscape:cx="817.48659"
+     inkscape:cy="-476.44517"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,203)">
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:17.16109657;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.79999995"
+       d="M 944.88281 37.794922 A 907.08661 907.08661 0 0 0 37.794922 944.88281 A 907.08661 907.08661 0 0 0 944.88281 1851.9688 A 907.08661 907.08661 0 0 0 1851.9688 944.88281 A 907.08661 907.08661 0 0 0 944.88281 37.794922 z M 944.88281 214.9375 A 729.94375 729.94375 0 0 1 1674.8262 944.88281 A 729.94375 729.94375 0 0 1 944.88281 1674.8262 A 729.94375 729.94375 0 0 1 214.9375 944.88281 A 729.94375 729.94375 0 0 1 944.88281 214.9375 z "
+       transform="matrix(0.26458333,0,0,0.26458333,0,-203)"
+       id="path4485"
+       inkscape:export-xdpi="1.27"
+       inkscape:export-ydpi="1.27" />
+    <circle
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.476796;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.79999995"
+       id="circle4495"
+       cx="250"
+       cy="46.999992"
+       r="25.202076"
+       inkscape:export-xdpi="1.27"
+       inkscape:export-ydpi="1.27" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4.9739089;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.79999995"
+       d="M 43.169922 848.73633 A 907.0866 907.0866 0 0 0 37.794922 944.88281 A 907.0866 907.0866 0 0 0 43.951172 1041.0273 L 405.13867 1041.0273 A 543.43181 907.08661 0 0 1 401.44922 944.88281 A 543.43181 907.08661 0 0 1 404.66992 848.73633 L 43.169922 848.73633 z M 1484.625 848.73633 A 543.43181 907.08661 0 0 1 1488.3145 944.88281 A 543.43181 907.08661 0 0 1 1485.0938 1041.0273 L 1846.5938 1041.0273 A 907.0866 907.0866 0 0 0 1851.9688 944.88281 A 907.0866 907.0866 0 0 0 1845.8125 848.73633 L 1484.625 848.73633 z "
+       transform="matrix(0.26458333,0,0,0.26458333,0,-203)"
+       id="rect4491"
+       inkscape:export-xdpi="1.27"
+       inkscape:export-ydpi="1.27" />
+    <path
+       id="path4505"
+       d="m 275.43849,-191.57797 a 239.99999,239.99999 0 0 0 -25.43876,-1.42213 239.99999,239.99999 0 0 0 -25.43823,1.62884 v 95.56419 a 240,143.783 0 0 1 25.43823,-0.976167 240,143.783 0 0 1 25.43876,0.852144 z m 0,381.38499 a 240,143.783 0 0 1 -25.43876,0.97618 240,143.783 0 0 1 -25.43823,-0.85215 v 95.64688 a 239.99999,239.99999 0 0 0 25.43823,1.42213 239.99999,239.99999 0 0 0 25.43876,-1.62885 z"
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.31601334;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.79999995"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="1.27"
+       inkscape:export-ydpi="1.27" />
+  </g>
+</svg>

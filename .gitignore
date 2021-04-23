@@ -1,0 +1,4 @@
+bin/*
+proj/Capture.pro.user
+build-*
+*.bat
